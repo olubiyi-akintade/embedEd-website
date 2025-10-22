@@ -1,0 +1,31 @@
+
+:root{
+  --navy: #0A2540;
+  --blue: #007BFF;
+  --muted: #6b7280;
+  --max-width: 1100px;
+  --page-pad: 48px;
+  font-family: 'Poppins', system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+}
+*{box-sizing:border-box}
+body{margin:0;background:#ffffff;color:var(--navy);-webkit-font-smoothing:antialiased;line-height:1.5}
+.header{padding:20px calc((100% - var(--max-width))/2);}
+.header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-width);margin:0 auto}
+.logo{display:flex;align-items:center;gap:12px}
+.logo img{height:56px}
+.nav a{color:var(--navy);text-decoration:none;margin-left:28px;font-weight:500}
+.hero{max-width:var(--max-width);margin:24px auto;padding:var(--page-pad);display:flex;align-items:center;gap:40px}
+.hero-left{flex:1;min-width:280px}
+.hero-right{flex:1;display:flex;justify-content:center;align-items:center}
+.h1{font-size:56px;line-height:1.02;margin:0 0 20px;font-weight:700}
+.lead{color:var(--muted);font-size:18px;margin-bottom:28px;max-width:620px}
+.btn{background:var(--navy);color:white;padding:12px 20px;border-radius:8px;border:none;font-weight:600;text-decoration:none;display:inline-block}
+.chip-svg{max-width:380px;width:100%;height:auto}
+.footer{padding:24px;text-align:center;color:var(--muted);font-size:14px}
+@media (max-width:900px){
+  .hero{flex-direction:column;padding:24px}
+  .h1{font-size:36px;text-align:center}
+  .hero-right{order:-1;margin-bottom:12px}
+  .logo img{height:48px}
+  .nav a{margin-left:16px}
+}
