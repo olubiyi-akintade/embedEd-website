@@ -12,7 +12,7 @@ body{margin:0;background:#ffffff;color:var(--navy);-webkit-font-smoothing:antial
 .header{padding:20px calc((100% - var(--max-width))/2);}
 .header-inner{display:flex;align-items:center;justify-content:space-between;max-width:var(--max-width);margin:0 auto}
 .logo{display:flex;align-items:center;gap:12px}
-.logo img{height:56px}
+.logo img{height:100px}
 .nav a{color:var(--navy);text-decoration:none;margin-left:28px;font-weight:500}
 .hero{max-width:var(--max-width);margin:24px auto;padding:var(--page-pad);display:flex;align-items:center;gap:40px}
 .hero-left{flex:1;min-width:280px}
