@@ -3,52 +3,69 @@
   <head>
     <title>About — embedEd Consulting Ltd</title>
     <style>
-      body { opacity: 0; transition: opacity .2s ease-in; }
+      body { opacity: 0; transition: opacity 0.3s ease-in; font-family: 'Poppins', sans-serif; margin: 0; }
+      header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 20px 40px; border-bottom: 1px solid #eee;
+      }
+      .logo img { height: 70px; }
+      nav a {
+        text-decoration: none; color: #0a2342; font-weight: 600; margin-left: 20px;
+        transition: color 0.2s ease;
+      }
+      nav a:hover, nav a.active { color: #123b6c; }
+      main {
+        max-width: 900px; margin: 80px auto; padding: 0 40px;
+        line-height: 1.7;
+      }
+      h1 {
+        color: #0a2342; font-size: 2rem; margin-bottom: 20px;
+      }
+      h2 {
+        color: #123b6c; font-size: 1.4rem; margin-top: 40px;
+      }
+      p {
+        color: #555; margin-bottom: 20px;
+      }
+      footer {
+        text-align: center; padding: 20px; color: #888; border-top: 1px solid #eee;
+        margin-top: 80px;
+      }
     </style>
     <script>
       fetch("assets/head.html")
         .then(response => response.text())
-        .then(data => {
-          document.head.insertAdjacentHTML("beforeend", data);
-        });
+        .then(data => { document.head.insertAdjacentHTML("beforeend", data); });
     </script>
   </head>
-
   <body>
-    <header class="header">
-      <div class="header-inner">
-        <div class="logo">
-          <img src="assets/logo.png" alt="embedEd Consulting logo">
-        </div>
-        <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
-          <a href="services.html">Services</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+    <header>
+      <div class="logo"><img src="assets/logo.png" alt="embedEd Consulting Ltd logo"></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html" class="active">About</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
 
-    <main style="max-width:var(--max-width);margin:40px auto;padding:0 24px">
-      <h1 style="font-size:32px;color:var(--navy)">About embedEd Consulting Ltd</h1>
-      <p style="color:var(--muted);font-size:16px;max-width:760px">
+    <main>
+      <h1>About embedEd Consulting Ltd</h1>
+      <p>
         embedEd Consulting Ltd was founded to bridge the gap between engineering education and modern embedded systems practice. 
-        We collaborate with FE and HE providers to design, validate, and deliver curricula that align with current and emerging technologies — 
-        ensuring graduates are ready for the real world of electronics and embedded systems engineering.
+        We collaborate with FE and HE providers to design, validate, and deliver curricula that align with current and emerging technologies — ensuring graduates are ready for the real world of electronics and embedded systems engineering.
       </p>
 
-      <h2 style="margin-top:28px;color:var(--navy)">Founder</h2>
-      <p style="color:var(--muted);max-width:760px">
+      <h2>Founder</h2>
+      <p>
         Dr. Olubiyi Akintade is an electronic and embedded systems engineer, educator, and consultant with extensive experience in both academia and industry. 
         A former lecturer and electronic test engineer, he specialises in embedded systems development for WSN and IoT applications, and curriculum development. 
         He holds a PhD in Electronic and Electrical Engineering and is a member of the IET.
       </p>
     </main>
 
-    <footer class="footer">© 2025 embedEd Consulting Ltd</footer>
+    <footer>© 2025 embedEd Consulting Ltd</footer>
 
-    <script>
-      window.addEventListener('load', () => document.body.style.opacity = 1);
-    </script>
+    <script>window.addEventListener('load', () => document.body.style.opacity = 1);</script>
   </body>
 </html>
