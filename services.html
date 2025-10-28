@@ -1,13 +1,37 @@
 <!doctype html>
 <html lang="en">
-<head><meta charset="utf-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/><title>Services — embedEd Consulting Ltd</title>
-  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
-  <link rel="shortcut icon" href="assets/favicon.ico" type="image/x-icon">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/styles.css"></head>
-<body>
-  <header class="header"><div class="header-inner"><div class="logo"><img src="assets/logo.png" alt="embedEd Consulting logo"></div>
-  <nav class="nav"><a href="index.html">Home</a><a href="about.html">About</a><a href="services.html">Services</a><a href="contact.html">Contact</a></nav></div></header>
+  <head>
+    <title>Services — embedEd Consulting Ltd</title>
+
+    <!-- Temporary inline style to avoid flash before styles load -->
+    <style>
+      body { opacity: 0; transition: opacity .2s ease-in; }
+    </style>
+
+    <!-- Inject shared head content (favicon, fonts, CSS) -->
+    <script>
+      fetch("assets/head.html")
+        .then(response => response.text())
+        .then(data => {
+          document.head.insertAdjacentHTML("beforeend", data);
+        });
+    </script>
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="header-inner">
+        <div class="logo">
+          <img src="assets/logo.png" alt="embedEd Consulting logo">
+        </div>
+        <nav class="nav">
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <a href="services.html">Services</a>
+          <a href="contact.html">Contact</a>
+        </nav>
+      </div>
+    </header>
   <main style="max-width:var(--max-width);margin:40px auto;padding:0 24px">
     <h1 style="font-size:32px;color:var(--navy)">Our Services</h1>
     <ul style="color:var(--muted);font-size:16px;max-width:760px">
