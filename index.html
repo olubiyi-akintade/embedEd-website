@@ -2,13 +2,9 @@
 <html lang="en">
   <head>
     <title>Home — embedEd Consulting Ltd</title>
-
-    <!-- Temporary inline style to avoid flash before styles load -->
     <style>
       body { opacity: 0; transition: opacity .2s ease-in; }
     </style>
-
-    <!-- Inject shared head content (favicon, fonts, CSS) -->
     <script>
       fetch("assets/head.html")
         .then(response => response.text())
@@ -25,27 +21,25 @@
           <img src="assets/logo.png" alt="embedEd Consulting logo">
         </div>
         <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html" class="active">About</a>
+          <a href="index.html" class="active">Home</a>
+          <a href="about.html">About</a>
           <a href="services.html">Services</a>
           <a href="contact.html">Contact</a>
         </nav>
       </div>
     </header>
 
-  <main class="hero" role="main">
-    <div class="hero-left">
-      <h1 class="h1">Curricula for<br/>Electronics.<br/>Skills for Life.</h1>
-      <p class="lead">embedEd Consulting designs and delivers high-quality electronic and embedded systems engineering curricula for FE and HE providers. We help institutions modernise programmes, upskill staff, and connect education with real-world engineering practice.</p>
-      <a class="btn" href="services.html">Learn more</a>
-    </div>
-    <div class="hero-right">
-      <img src="assets/illustration.png" alt="Electronics circuit illustration" style="max-width: 420px; height: auto;">
-    </div>
-  </main>
+    <!-- The rest of your home content here -->
+    <main>
+      <h1>Curricula for Electronics. Skills for Life.</h1>
+      <p>embedEd Consulting designs and delivers high-quality electronic and embedded systems engineering curricula...</p>
+      <a class="btn" href="services.html">Our Services</a>
+    </main>
 
-  <footer class="footer">
-    © 2025 embedEd Consulting Ltd — Curricula for Electronics. Skills for Life.
-  </footer>
-</body>
+    <footer class="footer">© 2025 embedEd Consulting Ltd</footer>
+
+    <script>
+      window.addEventListener('load', () => document.body.style.opacity = 1);
+    </script>
+  </body>
 </html>

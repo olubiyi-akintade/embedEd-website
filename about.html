@@ -2,13 +2,9 @@
 <html lang="en">
   <head>
     <title>About — embedEd Consulting Ltd</title>
-
-    <!-- Temporary inline style to avoid flash before styles load -->
     <style>
       body { opacity: 0; transition: opacity .2s ease-in; }
     </style>
-
-    <!-- Inject shared head content (favicon, fonts, CSS) -->
     <script>
       fetch("assets/head.html")
         .then(response => response.text())
@@ -35,7 +31,6 @@
 
     <main style="max-width:var(--max-width);margin:40px auto;padding:0 24px">
       <h1 style="font-size:32px;color:var(--navy)">About embedEd Consulting Ltd</h1>
-
       <p style="color:var(--muted);font-size:16px;max-width:760px">
         embedEd Consulting Ltd was founded to bridge the gap between engineering education and modern embedded systems practice. 
         We collaborate with FE and HE providers to design, validate, and deliver curricula that align with current and emerging technologies — 
@@ -52,7 +47,6 @@
 
     <footer class="footer">© 2025 embedEd Consulting Ltd</footer>
 
-    <!-- Reveal page once fully loaded -->
     <script>
       window.addEventListener('load', () => document.body.style.opacity = 1);
     </script>
