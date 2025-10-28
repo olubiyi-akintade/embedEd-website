@@ -2,45 +2,88 @@
 <html lang="en">
   <head>
     <title>Services — embedEd Consulting Ltd</title>
-
-    <!-- Temporary inline style to avoid flash before styles load -->
     <style>
-      body { opacity: 0; transition: opacity .2s ease-in; }
+      body { opacity: 0; transition: opacity 0.3s ease-in; font-family: 'Poppins', sans-serif; margin: 0; }
+      header {
+        display: flex; justify-content: space-between; align-items: center;
+        padding: 20px 40px; border-bottom: 1px solid #eee;
+      }
+      .logo img { height: 70px; }
+      nav a {
+        text-decoration: none; color: #0a2342; font-weight: 600; margin-left: 20px;
+        transition: color 0.2s ease;
+      }
+      nav a:hover, nav a.active { color: #123b6c; }
+      main {
+        max-width: 1100px; margin: 60px auto; padding: 0 40px;
+      }
+      h1 {
+        color: #0a2342; font-size: 2rem; margin-bottom: 20px;
+      }
+      .service {
+        margin-bottom: 32px;
+      }
+      .service h2 {
+        color: #123b6c; margin-bottom: 8px;
+      }
+      .service p {
+        color: #555; line-height: 1.6; margin: 0;
+      }
+      footer {
+        text-align: center; padding: 20px; color: #888; border-top: 1px solid #eee;
+        margin-top: 80px;
+      }
     </style>
-
-    <!-- Inject shared head content (favicon, fonts, CSS) -->
     <script>
       fetch("assets/head.html")
         .then(response => response.text())
-        .then(data => {
-          document.head.insertAdjacentHTML("beforeend", data);
-        });
+        .then(data => { document.head.insertAdjacentHTML("beforeend", data); });
     </script>
   </head>
-
   <body>
-    <header class="header">
-      <div class="header-inner">
-        <div class="logo">
-          <img src="assets/logo.png" alt="embedEd Consulting logo">
-        </div>
-        <nav class="nav">
-          <a href="index.html">Home</a>
-          <a href="about.html">About</a>
-          <a href="services.html" class="active">Services</a>
-          <a href="contact.html">Contact</a>
-        </nav>
-      </div>
+    <header>
+      <div class="logo"><img src="assets/logo.png" alt="embedEd Consulting Ltd logo"></div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </header>
-  <main style="max-width:var(--max-width);margin:40px auto;padding:0 24px">
-    <h1 style="font-size:32px;color:var(--navy)">Our Services</h1>
-    <ul style="color:var(--muted);font-size:16px;max-width:760px">
-      <li><strong>Curriculum Development</strong> — Design and modernisation of HNC, HND, and foundation degree programmes in electronics and embedded systems.</li>
-      <li><strong>Programme Validation & Review</strong> — Support with course validation, mapping, and quality enhancement.</li>
-      <li><strong>Lecturer Training & CPD</strong> — Bespoke workshops to build staff confidence in modern embedded systems, IoT, and digital electronics.</li>
-      <li><strong>Curriculum Delivery</strong> — Guest lecturing and short-course delivery in embedded systems design, programming, and hardware development.</li>
-    </ul>
-  </main>
-  <footer class="footer">© 2025 embedEd Consulting Ltd</footer>
-</body>
+
+    <main>
+      <h1>Our Services</h1>
+      <div class="service">
+        <h2>Curriculum Design & Validation</h2>
+        <p>
+          We work with FE and HE institutions to design and validate electronic and embedded systems curricula that meet industry and academic standards.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Curriculum Delivery Support</h2>
+        <p>
+          We assist providers in the delivery of HNC, HND, and Foundation Degree modules through embedded systems-focused teaching materials and lab activities.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Staff Development & Training</h2>
+        <p>
+          We support academic staff with upskilling workshops in embedded systems, microcontrollers, IoT, and modern electronic design practice.
+        </p>
+      </div>
+
+      <div class="service">
+        <h2>Industry Alignment & Advisory</h2>
+        <p>
+          We help institutions strengthen connections between academic programmes and real-world engineering needs through project-based learning and collaboration.
+        </p>
+      </div>
+    </main>
+
+    <footer>© 2025 embedEd Consulting Ltd</footer>
+
+    <script>window.addEventListener('load', () => document.body.style.opacity = 1);</script>
+  </body>
 </html>
